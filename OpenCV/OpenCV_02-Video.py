@@ -4,6 +4,11 @@ cap = cv2.VideoCapture(0)   # Web cam capture
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 out = cv2.VideoWriter('Me.avi', fourcc, 20.0, (640, 480))
 
+# Get width of the frame
+# print(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+# Get height of the frame
+# print(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+
 while cap.isOpened():
     ret, frame = cap.read()   # ret stores True and False, frame stores video
     if ret:
